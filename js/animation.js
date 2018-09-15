@@ -1,3 +1,13 @@
+function initText(element) {
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var elem = document.getElementById(element);
+    var len = elem.innerHTML.length;
+    elem.innerHTML = "";
+
+    for (var i = 0; i < len; i++) {
+        elem.innerHTML += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+}
 
 function genText(text, element, delay, callback) {
     var i = 0;
@@ -22,7 +32,11 @@ function genText(text, element, delay, callback) {
     }
 }
 
-function matrixText(txt, element, callback) {
+function matrixText(txt, element, delay, callback) {
+    if (document.getElementById(element).innerHTML == txt) {
+        return;
+    }
+
     setTimeout(function() {
         var text = txt;
         var elem = document.getElementById(element);
@@ -48,15 +62,26 @@ function matrixText(txt, element, callback) {
             generate(i, final);
             final = "";
         }
-    }, 500);
+    }, delay);
 }
 
 function onStart() {
-    matrixText("Richard Phan", "name-banner", function() {
+    initText("name-banner");
+    matrixText("Richard Phan", "name-banner", 500, function() {
         genText("software engineer and electronics enthusiast", "desc-banner", 500)
     });
+
+    initText("software-header");
+    document.getElementById("software-header").addEventListener("mouseover", function() {
+        matrixText("Software", "software-header", 0, null);
+    })
+
+    initText("projects-header");
+    document.getElementById("projects-header").addEventListener("mouseover", function() {
+        matrixText("Projects", "projects-header", 0, null);
+    })
 }
 
-window.addEventListener('load', function() {
+window.addEventListener("load", function() {
     onStart();
 })
