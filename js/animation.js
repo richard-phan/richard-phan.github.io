@@ -1,5 +1,8 @@
-function initText(element) {
+function initText(element, symbols) {
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    if (symbols) {
+        possible += "-+*/|}{[]~\\\":;?/.><=+-_)(*&^%$#@!)}";
+    }
     var elem = document.getElementById(element);
     var len = elem.innerHTML.length;
     elem.innerHTML = "";
@@ -32,7 +35,7 @@ function genText(text, element, delay, callback) {
     }
 }
 
-function matrixText(txt, element, delay, callback) {
+function matrixText(txt, element, delay, symbols, callback) {
     if (document.getElementById(element).innerHTML == txt) {
         return;
     }
@@ -40,9 +43,11 @@ function matrixText(txt, element, delay, callback) {
     setTimeout(function() {
         var text = txt;
         var elem = document.getElementById(element);
-        //var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ-+*/|}{[]~\\\":;?/.><=+-_)(*&^%$#@!)}";
-        //var possible = "-+*/|}{[]~\\\":;?/.><=+-_)(*&^%$#@!)}"
-        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        if (symbols) {
+            possible += "-+*/|}{[]~\\\":;?/.><=+-_)(*&^%$#@!)}";
+        }
+
         var final = "";
 
         function generate(i, final) {
@@ -66,19 +71,19 @@ function matrixText(txt, element, delay, callback) {
 }
 
 function onStart() {
-    initText("name-banner");
-    matrixText("Richard Phan", "name-banner", 500, function() {
+    initText("name-banner", false);
+    matrixText("Richard Phan", "name-banner", 500, false, function() {
         genText("software engineer and electronics enthusiast", "desc-banner", 500)
     });
 
-    initText("software-header");
+    initText("software-header", true);
     document.getElementById("software-header").addEventListener("mouseover", function() {
-        matrixText("Software", "software-header", 0, null);
+        matrixText("Software", "software-header", 0, true, null);
     })
 
-    initText("projects-header");
+    initText("projects-header", true);
     document.getElementById("projects-header").addEventListener("mouseover", function() {
-        matrixText("Projects", "projects-header", 0, null);
+        matrixText("Projects", "projects-header", 0, true, null);
     })
 }
 
