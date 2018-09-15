@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+html, body, h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.navbar {
+    width: 100vw;
+    padding: 15px;
+    position: fixed;
+    background-color: #FFF;
+    z-index: 1;
+}
+
+.navbar .container {
+    width: 65vw;
+    margin: auto;
+}
+
+.navbar a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+    font-weight: 400;
+}
+
+.navbar a:hover {
+    color: #888;
+}
+
+.landing-page {
+    height: 100vh;
+    position: relative;
+    background-image: url('../img/skylinebw.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center bottom;
+}
+
+.landing-page .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 10%;
+    width: 50%;
+    margin: -5% 0 0 -25%;
+}
+
+.landing-page h1 {
+    font-size: 50px;
+    color: #EEE;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+.landing-page h2 {
+    font-size: 30px;
+    color: #EEE;
+    letter-spacing: 3px;
+    text-transform: lowercase;
+}
+
+.about-page {
+    background-color: #FFF;
+    height: auto;
+}
+
+.about-page .container {
+    margin: 40px auto;
+    width: 70%;
+    align-items: center;
+}
+
+.about-page .bio-img {
+    text-align: center;
+}
+
+.about-page img {
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.about-page .bio {
+    padding: 30px;
+}
+
+.software-page {
+    background-color: #282828;
+    height: auto;
+    color: #FFF;
+    text-align: center;
+}
+
+.software-page .header {
+    padding: 50px;
+}
+
+.software-page .wrapper {
+    margin: auto;
+    height: auto;
+    width: 75vw;
+}
+
+.software-page .sub-container {
+    margin: 0 30px 75px 30px;
+    height: 35%;
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.software-page h1, .projects-page h1{
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.software-page .sub-container h1, .projects-page .sub-container h1 {
+    font-size: 30px;
+}
+
+.software-page .sub-container h2, .projects-page .sub-container h2 {
+    padding-top: 20px;
+}
+
+.projects-page {
+    background-color: #FFF;
+    height: auto;
+    text-align: center;
+}
+
+.projects-page .header {
+    padding: 50px;
+    text-align: center;
+}
+
+.projects-page .wrapper {
+    margin: auto;
+    height: auto;
+    width: 70vw;
+}
+
+.projects-page .sub-container {
+    height: 200px;
+    width: 200px;
+    margin: 0 50px 75px 50px;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+footer {
+    padding: 50px;
+    text-align: center;
+    background-color: #282828;
+}
+
+footer a {
+    color: #CCC;
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+footer a:hover {
+    color: #FFF;
+}
+
+footer img {
+    opacity: .7;
+}
+
+footer img:hover {
+    opacity: 1;
+}
+
+footer .breadcrumbs {
+    padding: 25px 0;
+}
