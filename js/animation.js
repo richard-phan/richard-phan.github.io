@@ -22,12 +22,6 @@ function genText(text, element, delay, callback) {
     }
 }
 
-function onStart() {
-    genText("Richard Phan", "name-banner", 1000, function() {
-        genText("software engineer and electronics enthusiast", "desc-banner", 500);
-    });
-}
-
 function matrixText(txt, element, callback) {
     setTimeout(function() {
         var text = txt;
