@@ -77,12 +77,12 @@ function onStart() {
     });
 
     initText("software-header", true);
-    document.getElementById("software-header").addEventListener("mouseover", function() {
+    document.getElementById("software").addEventListener("mouseover", function() {
         matrixText("Software", "software-header", 0, true, null);
     })
 
     initText("projects-header", true);
-    document.getElementById("projects-header").addEventListener("mouseover", function() {
+    document.getElementById("projects").addEventListener("mouseover", function() {
         matrixText("Projects", "projects-header", 0, true, null);
     })
 }
