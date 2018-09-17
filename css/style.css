@@ -184,3 +184,41 @@ footer img:hover {
 footer .breadcrumbs {
     padding: 25px 0;
 }
+
+/*/////////////////////////////*/
+.main-picture {
+    height: 50vh;
+    background-color: #AAA;
+    background-image: url("../img/skylinebw.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.main-picture .container {
+    top: 50%;
+    left: 50%;
+    height: 10%;
+    width: 15%;
+    margin: -5% 0 0 -7.5%; 
+    position: absolute;
+    text-align:center;
+    color: #FFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
