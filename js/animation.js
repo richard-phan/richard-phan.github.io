@@ -76,14 +76,22 @@ function onStart() {
         genText("software engineer and electronics enthusiast", "desc-banner", 500)
     });
 
+    var usedSoftware = false;
     initText("software-header", true);
     document.getElementById("software").addEventListener("mouseover", function() {
-        matrixText("Software", "software-header", 0, true, null);
+        if (!usedSoftware) {
+            matrixText("Software", "software-header", 0, true, null);
+            usedSoftware = true;
+        }
     })
 
+    var usedProjects = false;
     initText("projects-header", true);
     document.getElementById("projects").addEventListener("mouseover", function() {
-        matrixText("Projects", "projects-header", 0, true, null);
+        if (!usedProjects) {
+            matrixText("Projects", "projects-header", 0, true, null);
+            usedProjects = true;
+        }
     })
 }
 
