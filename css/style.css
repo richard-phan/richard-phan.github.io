@@ -137,6 +137,16 @@ h1, h2, a {
     text-align: center;
 }
 
+.projects-page a, .projects-page a:visited {
+    text-decoration: none;
+    color: #EEE;
+}
+
+.projects-page a:hover {
+    text-decoration: none;
+    color: rgb(0, 96, 221);
+}
+
 .projects-page .header {
     padding: 50px;
     text-align: center;
