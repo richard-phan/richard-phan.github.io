@@ -139,7 +139,7 @@ h1, h2, a {
 
 .projects-page a, .projects-page a:visited {
     text-decoration: none;
-    color: #EEE;
+    color: #000;
 }
 
 .projects-page a:hover {
@@ -193,6 +193,12 @@ footer img:hover {
 
 footer .breadcrumbs {
     padding: 25px 0;
+}
+
+footer .contact {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #EEE;
 }
 
 /*/////////////////////////////*/
